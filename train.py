@@ -192,7 +192,7 @@ class Trainer:
 
 
 
-    def ctc_remove_successives_identical_ind(ind):
+    def ctc_remove_successives_identical_ind(self,ind):
        ind=re.sub("(<ctc>)+", '·',ind).strip(" ")
 
        res = ""
