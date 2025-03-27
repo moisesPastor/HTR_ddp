@@ -15,5 +15,5 @@ setup.py > aux
 mv aux setup.py
 
 pip install . #python setup.py install
-
+
 cd ../..
