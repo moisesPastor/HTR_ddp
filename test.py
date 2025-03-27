@@ -198,7 +198,6 @@ def main(rank:int, args):
          verbosity=args.verbosity)
 
     destroy_process_group()
-   
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Testing a HTR model.', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -217,6 +216,5 @@ if __name__ == "__main__":
     
     world_size=torch.cuda.device_count()
     mp.spawn(main, args = (args,), nprocs=world_size, join=True)
-  
     
     sys.exit(os.EX_OK)
