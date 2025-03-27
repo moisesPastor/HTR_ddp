@@ -10,7 +10,7 @@ git clone --recursive https://github.com/parlance/ctcdecode.git
 
 cd ctcdecode
 
-## Modify the setup.py to allow ngram order up to 10
+### Modify the setup.py to allow ngram order up to 10
 sed -r "/-DKENLM_MAX_ORDER=/\
 s/-DKENLM_MAX_ORDER=[0-9]+/-DKENLM_MAX_ORDER=10/" \
 setup.py > aux
